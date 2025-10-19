@@ -1,0 +1,13 @@
+name: Deployment
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  Deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rymndhng/release-on-push-action@master
+        with:
+          bump_version_scheme: minor
